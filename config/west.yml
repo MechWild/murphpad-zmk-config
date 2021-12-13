@@ -1,0 +1,13 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: kylemccreery
+      url-base: https://github.com/kylemccreery
+  projects:
+    - name: zmk
+      remote: kylemccreery
+      revision: murphpad
+      import: app/west.yml
+  self:
+    path: config
