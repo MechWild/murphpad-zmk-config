@@ -4,7 +4,7 @@
 
 1. You will need to [sign up for a GitHub account](https://github.com/signup), and [fork this repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) so you can edit it.
 2. Navigate to the **Actions** tab and click the "I understand my workflows, go ahead and run them" button to enable builds.
-   ![Actions tab with "I understand my workflows" button](https://aws1.discourse-cdn.com/github/original/2X/8/8a28c79db26e3c2d82f2d0694ae0762b2ef7763b.png)
+   ![Actions tab with "I understand my workflows" button](https://i.imgur.com/B7cTAE6.png)
 3. Edit [config/murphpad.conf](config/murphpad.conf) to enable/disable features. Edit [config/murphpad.keymap](config/murphpad.keymap) to change the keymap. Lastly, make sure the [build.yaml](build.yaml) file has your board in the "boards" list.
 4. After committing your changes, your firmware will begin compiling. Assuming there are no typos or other problems, it will eventually be [downloadable from the Actions tab](https://zmk.dev/docs/user-setup#installing-the-firmware).
 5. [Flash the firmware](https://zmk.dev/docs/user-setup#flashing-uf2-files) that matches the board you're using, e.g. `murphpad-nice_nano_v2-zmk.uf2` for a nice!nano v2.
@@ -37,7 +37,7 @@ And double-check the Kconfig file in the build results to make sure what you've 
 
 #### The OLED can be a bit finicky.
 
-- As of mid-July 2022, [there is a known issue with OLEDs not being re-initialized after power off](https://github.com/zmkfirmware/zmk/issues/674).
+[There is a known issue with OLEDs not being re-initialized after power off](https://github.com/zmkfirmware/zmk/issues/674); please check that pull request for any updates and/or possible workarounds.
 
 Try the following:
 
@@ -59,7 +59,7 @@ If the board powering your MurphPad has an alternate power pin (often labeled `R
 
 Later revisions of the MurphPad add jumpers to simplify this process for boards with alternate power pins [in the same place as nice!nano `RAW`](https://nicekeyboards.com/docs/nice-nano/pinout-schematic), but this can be done on all known versions.
 
-:warning: If using a nice!nano v2 without a battery, its `RAW` pin does not always deliver consistent voltage. This can result in the OLED turning off immediately after boot, or failing to turn on. Refer to [step 1 of this section](#the-oled-can-be-a-bit-finicky) for troubleshooting steps.
+:warning: If using a nice!nano v2 without a battery, its `RAW` pin does not always deliver consistent voltage. This can result in the OLED turning off immediately after boot, or failing to turn on. Unfortunately, the only guaranteed fix is to add a battery; occasionally it will work after a reset [as described in step 1](#the-oled-can-be-a-bit-finicky).
 
 ---
 
