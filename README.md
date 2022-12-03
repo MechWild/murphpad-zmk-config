@@ -53,6 +53,8 @@ Since the RGB LEDs and the OLED are powered by the same pin (`VCC`), both will b
 
 This configuration setting will allow you to turn the RGB LEDs off without cutting power. It is the default in this repository.
 
+:warning: Not cutting power to the LEDs will have a significant impact on battery life. Check the [ZMK Power Profiler](https://zmk.dev/power-profiler) and set your expectations accordingly.
+
 #### Connect OLED VCC to a different power source.
 
 If the board powering your MurphPad has an alternate power pin (often labeled `RAW`), connecting `VCC` on the OLED to it will prevent the display from being affected when board `VCC` is toggled off.
