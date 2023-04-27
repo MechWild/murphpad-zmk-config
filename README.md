@@ -24,7 +24,7 @@ A few more examples below:
 | QMK | ZMK |
 | --- | --- |
 | `KC_A` | `&kp A` |
-| `QK_REBOOT` | `&reset` |
+| `QK_REBOOT` | `&sys_reset` |
 | `LT(1, KC_SPACE)` | `&lt 1 SPACE` |
 
 There are many, many more differences. Don't forget to [check the ZMK docs](https://zmk.dev/docs/features/keymaps).
